@@ -1,0 +1,15 @@
+@import "./Scss/bootstrap";
+
+
+.landingPages{
+    background-image: url("../src/Assets/Images/landingPage.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    min-height: calc(100vh - 138px);
+}
+
+.loginPage{
+    background: linear-gradient(90deg,#2f80ed,#56ccf2);
+    min-height: 100vh;
+}
