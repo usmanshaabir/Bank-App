@@ -2,9 +2,15 @@ import React from 'react';
 import Google from "../../../Assets/Images/google.png";
 import facebook from "../../../Assets/Images/facebook-Login.png";
 import github from "../../../Assets/Images/github-Login.png"
-import { Link } from 'react-router-dom';
+import { Link, useNavigate } from 'react-router-dom';
 
 export default function Login() {
+    const navigate = useNavigate()
+
+    const handleDashboard = () => {
+        navigate("/dashboard")
+    }
+
     return (
         <div className='loginPage'>
             <div className="container">
@@ -27,7 +33,7 @@ export default function Login() {
                                     <label class="form-check-label" for="exampleCheck1">Remember me</label>
                                 </div>
                                 <div class="d-grid">
-                                    <button class="btn btn-primary" type="button">Login</button>
+                                    <button class="btn btn-primary" type="button" onClick={handleDashboard}>Login</button>
                                 </div>
                             </form>
                             <div className='d-flex justify-content-center mt-4'>
