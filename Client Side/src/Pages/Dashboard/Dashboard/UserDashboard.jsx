@@ -3,8 +3,15 @@ import user from "../../../Assets/Images/user.png";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faEye } from '@fortawesome/free-solid-svg-icons'
 import { faTentArrowLeftRight } from '@fortawesome/free-solid-svg-icons'
+import { useNavigate } from 'react-router-dom';
 
 export default function UserDashboard() {
+  const navigate = useNavigate()
+
+  const handleCreateAccount = () => {
+    navigate("/Dashboard/createAccount")
+  }
+
   return (
     <>
       <div className="container">
@@ -21,7 +28,7 @@ export default function UserDashboard() {
                   </div>
                 </div>
                 <div className='d-flex justify-content-center mt-4 pb-4 mb-5 border-bottom'>
-                  <button type="button" className="btn btn-success me-3">+ Add New Account </button>
+                  <button type="button" className="btn btn-success me-3" onClick={handleCreateAccount}>+ Add New Account </button>
                   <button type="button" className="btn btn-info text-white "><span><FontAwesomeIcon icon={faEye} className='pe-2' /></span>View All Account </button>
                 </div>
               </div>
