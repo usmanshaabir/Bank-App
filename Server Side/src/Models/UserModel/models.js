@@ -10,7 +10,8 @@ const UserModel = new mongoose.Schema({
     accountType: String,
     cnicNumber: Number,
     accountNumber: Number,
-    deposit: Number
+    deposit: Number,
+    description: String
 }, {
     collection: "accountDetail",
     versionKey: false
